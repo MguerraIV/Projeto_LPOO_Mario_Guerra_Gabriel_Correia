@@ -1,2 +1,2 @@
-# Projeto_LPOO---M-rio-Guerra-e-Gabriel-Correia
+# Projeto_LPOO_Mario-Guerra-e-Gabriel-Correia
 PROJETO DE LPOO PARA CRIAÇÃO DO JOGO PUZZLE-N UTILIZANDO JAVA
