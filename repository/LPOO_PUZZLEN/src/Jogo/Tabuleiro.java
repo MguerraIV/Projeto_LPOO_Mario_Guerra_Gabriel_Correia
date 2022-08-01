@@ -29,4 +29,12 @@ public class Tabuleiro {
 		this.listaPecas = tempArray;
 	}
 	
+	public void exibeMatriz() { //printa os numeros da matriz
+        for(int i = 0; i < listaPecas.length - 1; i++) {
+            for(int k = 0; k < matriz; k++) {
+                System.out.print(listaPecas[i][k] + "\t "); //escreve no console enquanto não há interface
+            }
+            System.out.println();
+        }
+	}
 }
