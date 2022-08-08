@@ -6,6 +6,7 @@ public class Tabuleiro {
 	private String[] listaPecas;
 	private String[][] matrizPecas;
 	
+	
 	public Tabuleiro(int matriz){
 		setMatriz(matriz);
 	}
@@ -48,7 +49,6 @@ public class Tabuleiro {
 	
 	
 	public void exibeMatriz() { //printa os numeros do array de pecas em forma de matriz
-		this.contadorMatriz = 0;
         for(int i = 0; i < this.matriz; i++) {
             for(int k = 0; k < this.matriz; k++) {
                 System.out.print(this.matrizPecas[i][k] + "\t"); //escreve no console enquanto não há interface
