@@ -5,7 +5,9 @@ public class Testando {
 		Tabuleiro tab = new Tabuleiro(3);
 		tab.preencheArray();
 		tab.embaralhaArray();
+		tab.preencheMatriz();
 		tab.exibeMatriz();
+
 	}
 	
 }

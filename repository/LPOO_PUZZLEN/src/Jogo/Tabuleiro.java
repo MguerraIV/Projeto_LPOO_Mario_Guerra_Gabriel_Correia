@@ -4,7 +4,7 @@ import java.util.*;
 public class Tabuleiro {
 	private int matriz;
 	private String[] listaPecas;
-	private int contadorMatriz;
+	private String[][] matrizPecas;
 	
 	public Tabuleiro(int matriz){
 		setMatriz(matriz);
@@ -18,29 +18,40 @@ public class Tabuleiro {
 	}
 	
 	
-	public void preencheArray() {
-		String[] tempArray = new String[matriz*matriz]; //array temporário que armazena a ordem
-		for(int i = 0; i < matriz*matriz; i++) {
+	public void preencheArray() { //cria uma lista coms os valores
+		String[] tempArray = new String[this.matriz*this.matriz]; //array temporário que armazena a ordem
+		for(int i = 0; i < this.matriz*this.matriz; i++) {
 			tempArray[i] = "[" + String.valueOf(i + 1) + "]";
 		}
 		this.listaPecas = tempArray; 
 		listaPecas[listaPecas.length - 1] = "[ ]";
 	}
 	
+	public void preencheMatriz() { //tranforma a lista em um array 2d
+		int contador = 0;
+		String[][] matrizTemp = new String[this.matriz][this.matriz];
+        for(int i = 0; i < this.matriz; i++) {
+            for(int k = 0; k < this.matriz; k++) {
+                matrizTemp[i][k] = this.listaPecas[contador]; //escreve no console enquanto não há interface
+                contador++;
+            }
+        }
+        this.matrizPecas = matrizTemp;
+	}
 	
-	public void embaralhaArray() {
-        List<String> list =Arrays.asList(listaPecas); //embaralha o array que contém as pecas
+	
+	public void embaralhaArray() { //embaralha a lista 
+        List<String> list =Arrays.asList(this.listaPecas); //embaralha o array que contém as pecas
         Collections.shuffle(list);
-        list.toArray(listaPecas);
+        list.toArray(this.listaPecas);
 	}
 	
 	
 	public void exibeMatriz() { //printa os numeros do array de pecas em forma de matriz
 		this.contadorMatriz = 0;
-        for(int i = 0; i < matriz; i++) {
-            for(int k = 0; k < matriz; k++) {
-                System.out.print(listaPecas[contadorMatriz] + "\t"); //escreve no console enquanto não há interface
-                contadorMatriz++;
+        for(int i = 0; i < this.matriz; i++) {
+            for(int k = 0; k < this.matriz; k++) {
+                System.out.print(this.matrizPecas[i][k] + "\t"); //escreve no console enquanto não há interface
             }
             System.out.println();
         }
