@@ -19,6 +19,16 @@ public class Tabuleiro {
 	}
 	
 	
+	public String[][] getTabuleiro() { //retorna a matriz de peças do jogo
+		return this.matrizPecas;
+	}
+	
+	
+	public void setTabuleiro(String[][] tabuleiro) { //seta a matriz de peças do jogo
+		this.matrizPecas = tabuleiro;
+	}
+	
+	
 	public void preencheArray() { //cria uma lista coms os valores
 		String[] tempArray = new String[this.matriz*this.matriz]; //array temporário que armazena a ordem
 		for(int i = 0; i < this.matriz*this.matriz; i++) {
@@ -27,6 +37,7 @@ public class Tabuleiro {
 		this.listaPecas = tempArray; 
 		listaPecas[listaPecas.length - 1] = "[ ]";
 	}
+	
 	
 	public void preencheMatriz() { //tranforma a lista em um array 2d
 		int contador = 0;
@@ -56,5 +67,6 @@ public class Tabuleiro {
             System.out.println();
         }
 	}
+	
 	
 }
