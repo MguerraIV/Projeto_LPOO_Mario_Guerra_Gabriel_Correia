@@ -18,6 +18,10 @@ public class Tabuleiro {
 		}
 	}
 	
+	public int getMatriz() {
+		return this.matriz;
+	}
+	
 	
 	public String[][] getTabuleiro() { //retorna a matriz de peças do jogo
 		return this.matrizPecas;
