@@ -2,12 +2,9 @@ package Jogo;
 
 public class Testando {
 	public static void main(String[] args){
-		Tabuleiro tab = new Tabuleiro(3);
-		tab.preencheArray();
-		tab.embaralhaArray();
-		tab.preencheMatriz();
-		tab.exibeMatriz();
-
+		Jogando jogo = new Jogando();
+		jogo.jogo();
+		System.out.println("teste");
 	}
 	
 }
